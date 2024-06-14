@@ -52,6 +52,9 @@ body {
     .navbar-default .navbar-nav>li>a {
         border-bottom: 1px solid #eee;
     }
+    .navbar-default .navbar-nav.navbar-right>li>a {
+        border-bottom: unset;
+    }
 }
 
 .navbar-default .navbar-nav>li>a:hover {
