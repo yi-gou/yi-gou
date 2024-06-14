@@ -35,6 +35,10 @@ body {
     margin-left: 10px !important;
 }
 
+.navbar-brand img {
+    mix-blend-mode: multiply;
+}
+
 .navbar-default .navbar-nav>li>a {
     font-size: 16px;
     color: #444;
