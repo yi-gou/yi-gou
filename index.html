@@ -53,9 +53,11 @@
     <section id="home">
         <div class="jumbotron banner">
             <div class="video">
-                <video src="https://cdn.jsdelivr.net/gh/yi-gou/yi-gou.github.io/videos/video.mp4" preload="auto" id="myVideo"
+                <video preload id="myVideo"
                     autoplay muted loop x5-video-player-fullscreen="true" x5-playsinline playsinline
-                    webkit-playsinline></video>
+                    webkit-playsinline>
+                    <source src="https://cdn.jsdelivr.net/gh/yi-gou/yi-gou.github.io/videos/video.mp4" type="video/mp4">
+                </video>
             </div>
             <div class="container wow fadeInUp">
                 <h1>河北<span class="color">香衣邦</span>贸易有限公司</h1>
@@ -350,7 +352,20 @@
             $(this).attr('src', $(this).attr('src').replace('https://cdn.jsdelivr.net/gh/yi-gou/yi-gou.github.io/videos/', 'videos/'));
         })
         const myVideo = document.getElementById("myVideo");
-        myVideo.play();
+        function tryPlay(num) {
+            let count = 0;
+            myVideo.load();
+            while (count < num) {
+                count++;
+                try {
+                    myVideo.play();
+                    break;
+                } catch (e) {
+                    console.log(e);
+                }
+            }
+        }
+        tryPlay(5);
     </script>
 </body>
 
