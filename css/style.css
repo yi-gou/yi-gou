@@ -47,6 +47,7 @@ section:nth-of-type(odd) {
 .navbar {
     margin-bottom: 0;
     border-bottom: 1px solid #e6e6e6;
+    background-color: #fff;
 }
 
 .navbar-default .navbar-brand {
@@ -109,9 +110,9 @@ section:nth-of-type(odd) {
 }
 
 #home {
-    /* background: url(../images/banner.jpg);
+    background: url(../images/banner.jpg);
     background-size: cover;
-    background-position: center; */
+    background-position: center;
     position: relative;
 }
 
@@ -143,7 +144,7 @@ section:nth-of-type(odd) {
 .banner {
     text-align: center;
     color: #fff;
-    padding: 200px 40px;
+    padding: 20vmin 40px;
     margin-bottom: 0;
     background-color: transparent;
     position: relative;
