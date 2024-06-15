@@ -349,6 +349,8 @@
         $('video').on('error', function () {
             $(this).attr('src', $(this).attr('src').replace('https://cdn.jsdelivr.net/gh/yi-gou/yi-gou.github.io/videos/', 'videos/'));
         })
+        const myVideo = document.getElementById("myVideo");
+        myVideo.play();
     </script>
 </body>
 
