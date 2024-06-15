@@ -6,7 +6,7 @@ function init(geoList) {
         const center = new qq.maps.LatLng(geoList[i].geo[0], geoList[i].geo[1]);
         const map = new qq.maps.Map(dom, {
             center,
-            zoom: 17,
+            zoom: 18,
             draggable: true,
             scrollwheel: true,
         });
