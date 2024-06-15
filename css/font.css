@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'PingFang SC';
-    src: url('../fonts/PingFangSC-Regular.otf');
+    src: url('https://cdn.jsdelivr.net/gh/yi-gou/yi-gou.github.io/fonts/PingFangSC-Regular.otf');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -8,7 +8,7 @@
 
 @font-face {
     font-family: 'PingFang SC';
-    src: url('../fonts/PingFangSC-Semibold.otf');
+    src: url('https://cdn.jsdelivr.net/gh/yi-gou/yi-gou.github.io/fonts/PingFangSC-Semibold.otf');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -16,7 +16,7 @@
 
 @font-face {
     font-family: 'PingFang SC';
-    src: url('../fonts/PingFangSC-Medium.otf');
+    src: url('https://cdn.jsdelivr.net/gh/yi-gou/yi-gou.github.io/fonts/PingFangSC-Medium.otf');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -24,7 +24,7 @@
 
 @font-face {
     font-family: 'PingFang SC';
-    src: url('../fonts/PingFangSC-Light.otf');
+    src: url('https://cdn.jsdelivr.net/gh/yi-gou/yi-gou.github.io/fonts/PingFangSC-Light.otf');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -32,7 +32,7 @@
 
 @font-face {
     font-family: 'PingFang SC';
-    src: url('../fonts/PingFangSC-Ultralight.otf');
+    src: url('https://cdn.jsdelivr.net/gh/yi-gou/yi-gou.github.io/fonts/PingFangSC-Ultralight.otf');
     font-weight: 200;
     font-style: normal;
     font-display: swap;
@@ -40,7 +40,7 @@
 
 @font-face {
     font-family: 'PingFang SC';
-    src: url('../fonts/PingFangSC-Thin.otf');
+    src: url('https://cdn.jsdelivr.net/gh/yi-gou/yi-gou.github.io/fonts/PingFangSC-Thin.otf');
     font-weight: 100;
     font-style: normal;
     font-display: swap;
