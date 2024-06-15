@@ -292,6 +292,11 @@
             new WOW().init();
         });
     </script>
+    <script>
+        $('img').on('error', function () {
+            $(this).attr('src', $(this).attr('src').replace('https://cdn.jsdelivr.net/gh/yi-gou/yi-gou.github.io/images/', 'images/'));
+        })
+    </script>
 </body>
 
 </html>
