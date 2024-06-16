@@ -35,6 +35,10 @@ section:nth-of-type(odd) {
     background: #f5f5f5;
 }
 
+section {
+    overflow: hidden;
+}
+
 .mai-icon,
 .glyphicon-fire,
 .glyphicon-leaf {
