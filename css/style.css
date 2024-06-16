@@ -131,11 +131,11 @@ section:nth-of-type(odd) {
     object-fit: cover;
 }
 
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
     #home .banner .video video {
         display: none;
     }
-}
+} */
 
 #home .video::after {
     content: "";

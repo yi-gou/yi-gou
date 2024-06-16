@@ -3,7 +3,8 @@
 
 <head>
     <title>河北香衣邦贸易有限公司</title>
-    <meta name="keywords" content="河北香衣邦贸易有限公司, 亿购, 亿购商城, 香衣邦, 河北香衣邦, yigou, xiangyibang, xyb, yg, yigoushangcheng, ygsc" />
+    <meta name="keywords"
+        content="河北香衣邦贸易有限公司, 亿购, 亿购商城, 香衣邦, 河北香衣邦, yigou, xiangyibang, xyb, yg, yigoushangcheng, ygsc" />
     <meta name="description" content="河北香衣邦贸易有限公司前身为石家庄旅乐贸易有限公司，成立于 2001 年。自 2017
     年更名为河北香衣邦贸易有限公司，旗下有亿购、征途鸟、旅乐、亿购商城等知名品牌。公司以卓越的产品质量和周到的客户服务赢得了广泛的市场认可，迅速成长为一个充满活力和潜力的贸易企业。公司专注于服装、鞋帽和日用品的贸易。" />
     <meta name="author" content="河北香衣邦贸易有限公司" />
@@ -53,8 +54,13 @@
     <section id="home">
         <div class="jumbotron banner">
             <div class="video">
-                <video preload src="https://cdn.jsdelivr.net/gh/yi-gou/yi-gou.github.io/videos/video.mp4" id="myVideo"
-                    autoplay muted loop x5-video-player-fullscreen="true" x5-playsinline playsinline webkit-playsinline>
+                <video preload autoplay loop id="myVideo" muted x5-video-player-fullscreen="true" x5-playsinline
+                    playsinline webkit-playsinline poster="">
+                    <source src="https://cdn.jsdelivr.net/gh/yi-gou/yi-gou.github.io/videos/video.mp4" type="video/mp4">
+                    </source>
+                    <source src="videos/video.mp4" type="video/mp4">
+                    </source>
+                    您的浏览器不支持 HTML5 video 标签
                 </video>
             </div>
             <div class="container wow fadeInUp">
@@ -346,24 +352,37 @@
         $('img').on('error', function () {
             $(this).attr('src', $(this).attr('src').replace('https://cdn.jsdelivr.net/gh/yi-gou/yi-gou.github.io/images/', 'images/'));
         })
-        $('video').on('error', function () {
-            $(this).attr('src', $(this).attr('src').replace('https://cdn.jsdelivr.net/gh/yi-gou/yi-gou.github.io/videos/', 'videos/'));
-        })
         const myVideo = document.getElementById("myVideo");
         function tryPlay(num) {
-            let count = 0;
             myVideo.load();
-            while (count < num) {
-                count++;
-                try {
-                    myVideo.play();
-                    break;
-                } catch (e) {
-                    console.log(e);
+
+            function play(num, max) {
+                console.log(num, max);
+                if (num >= max) {
+                    return;
                 }
+                return myVideo.play().catch((e) => {
+                    play(num + 1, max);
+                    console.log(e.name);
+                });
             }
+
+            play(0, num);
         }
-        tryPlay(5);
+        requestAnimationFrame(() => tryPlay(5));
+        window.addEventListener('load', function () {
+            myVideo.addEventListener('ended', function () {
+                myVideo.load();
+                let playPromise = myVideo.play();
+                if (playPromise !== undefined) {
+                    playPromise.then(() => {
+                        myVideo.play()
+                    }).catch(() => {
+                        console.log('catch');
+                    })
+                }
+            }, false);
+        })
     </script>
 </body>
 
