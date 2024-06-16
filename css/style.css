@@ -75,7 +75,6 @@ section:nth-of-type(odd) {
     font-size: 16px;
     color: #444;
     height: 50px;
-    border-radius: 6px;
     display: flex;
     align-items: center;
 }
