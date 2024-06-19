@@ -361,11 +361,8 @@
         });
     </script>
     <script>
-        $('img').on('error', async function (){
-            const blob = await fetch($(this).attr('src')).then(res => res.blob());
-            const URL = window.URL || window.webkitURL;
-            $(this).attr('src', URL.createObjectURL(blob));
-            $(this).attr('onerror', null);
+        $('img').on('error', function () {
+            $(this).attr('src', $(this).attr('src').replace('https://cdn.jsdelivr.net/gh/yi-gou/yi-gou.github.io/images/', 'images/'));
         })
         const myVideo = document.getElementById("myVideo");
         function tryPlay(num) {
